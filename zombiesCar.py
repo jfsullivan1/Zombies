@@ -7,7 +7,7 @@ pygame.init()
 class Vehicle(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("car4.png")
+        self.image = pygame.image.load("car7.png")
         self.image = self.image.convert()
         self.image = pygame.transform.scale(self.image, (40, 60))
         self.rect = self.image.get_rect()
@@ -22,6 +22,7 @@ class Vehicle(pygame.sprite.Sprite):
         self.rect.centerx += self.dx
     def left(self):
         self.rect.centerx -= self.dx
+
 def main():
     screen = pygame.display.set_mode((700,500))
     pygame.display.set_caption("Zombies")
@@ -49,6 +50,7 @@ def main():
     
         key = pygame.key.get_pressed()
 
+        #Car Controls
         if key[pygame.K_LEFT]:
             car.left()
         if key[pygame.K_RIGHT]:
@@ -58,12 +60,16 @@ def main():
         if key[pygame.K_DOWN]:
             car.down()
 
+        
 
         spriteGRP.clear(screen, backDrop)
         spriteGRP.draw(screen)
         pygame.display.flip()
 
     pygame.mouse.set_visible(True)
+    #TO QUIT
+    if donePlaying == True:
+        pygame.quit()
 
 if __name__ == "__main__":
     main()
