@@ -12,7 +12,7 @@ screen = pygame.display.set_mode((1600, 820))
 class Vehicle(pygame.sprite.Sprite):
     def __init__(self, gun):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("car7.png")
+        self.image = pygame.image.load("Sprites/car7.png")
         self.image = self.image.convert()
         self.image = pygame.transform.scale(self.image, (50, 80))
         self.rect = self.image.get_rect()
@@ -20,14 +20,14 @@ class Vehicle(pygame.sprite.Sprite):
         self.dx = 12
         self.dy = 12
         self.rect.center = (400, 400)
-        self.carImgUp = pygame.image.load("car7.png")
-        self.carImgDown = pygame.image.load("carDown.png")
-        self.carImgLeft = pygame.image.load("carLeft.png")
-        self.carImgRight = pygame.image.load("carRight.png")
-        self.carImgRightUp = pygame.image.load("carRU.png")
-        self.carImgRightDown = pygame.image.load("carRD.png")
-        self.carImgLeftUp = pygame.image.load("carLU.png")
-        self.carImgLeftDown = pygame.image.load("carLD.png")
+        self.carImgUp = pygame.image.load("Sprites/car7.png")
+        self.carImgDown = pygame.image.load("Sprites/carDown.png")
+        self.carImgLeft = pygame.image.load("Sprites/carLeft.png")
+        self.carImgRight = pygame.image.load("Sprites/carRight.png")
+        self.carImgRightUp = pygame.image.load("Sprites/carRU.png")
+        self.carImgRightDown = pygame.image.load("Sprites/carRD.png")
+        self.carImgLeftUp = pygame.image.load("Sprites/carLU.png")
+        self.carImgLeftDown = pygame.image.load("Sprites/carLD.png")
 
     #Function to make the car turn up on the screen
     def up(self):
@@ -100,7 +100,7 @@ class Vehicle(pygame.sprite.Sprite):
 class gunDefault(pygame.sprite.Sprite):
     def __init__(self, startingX, startingY, gun):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("bullet.png")
+        self.image = pygame.image.load("Sprites/bullet.png")
         self.image = self.image.convert()
         self.image = pygame.transform.scale(self.image, (20, 35))
         self.rect = self.image.get_rect()
@@ -134,7 +134,7 @@ class gunDefault(pygame.sprite.Sprite):
 class ZombieOne(pygame.sprite.Sprite):
     def __init__(self, car):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("z1D.png")
+        self.image = pygame.image.load("Sprites/z1D.png")
         self.image = self.image.convert()
         self.image = pygame.transform.scale(self.image, (80, 80))
         self.rect = self.image.get_rect()
@@ -151,24 +151,24 @@ class ZombieOne(pygame.sprite.Sprite):
 
         #left
         if dx > 0 and dy < dx:
-            self.image = pygame.image.load("z1L.png")
+            self.image = pygame.image.load("Sprites/z1L.png")
             self.image = self.image.convert()
             self.image = pygame.transform.scale(self.image, (80, 80))
         #right
         if dx < 0 and dy > dx:
-            self.image = pygame.image.load("z1R.png")
+            self.image = pygame.image.load("Sprites/z1R.png")
             self.image = self.image.convert()
             self.image = pygame.transform.scale(self.image, (80, 80))
 
         #up
         if dx < .02 and dx > -.02 and dy > 0:
-            self.image = pygame.image.load("z1U.png")
+            self.image = pygame.image.load("Sprites/z1U.png")
             self.image = self.image.convert()
             self.image = pygame.transform.scale(self.image, (80, 80))
 
         #down
         if dx < .02 and dx > -.02 and dy < 0:
-            self.image = pygame.image.load("z1D.png")
+            self.image = pygame.image.load("Sprites/z1D.png")
             self.image = self.image.convert()
             self.image = pygame.transform.scale(self.image, (80, 80))
 
