@@ -5,7 +5,7 @@ import math
 import random
 from gunSprite import gunDefault
 
-screen = pygame.display.set_mode((1600, 820))
+screen = pygame.display.set_mode((1000, 700))
 
 #Car Class (Player)
 class Vehicle(pygame.sprite.Sprite):

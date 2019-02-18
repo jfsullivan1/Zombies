@@ -9,9 +9,10 @@ pygame.init()
 from carSprite import Vehicle
 from zombieSprite import ZombieOne
 from gunSprite import gunDefault
+from backGround import BackGround
 
 #Code for the actual window itself
-screen = pygame.display.set_mode((1600, 820))
+screen = pygame.display.set_mode((1000, 700))
 
 #Screen that pops up when you die
 def DeathScreen():
@@ -64,6 +65,10 @@ def main():
 
     #Necessary for respawning enemies
     respawn = 0
+
+    #Background
+    road = BackGround()
+    roadGRP = pygame.sprite.Group(road)
     
     #Game loop!
     while donePlaying == False:
@@ -121,14 +126,18 @@ def main():
         spriteGRP.clear(screen, backDrop)
         gunGRP.clear(screen, backDrop)
         zombieGRP.clear(screen, backDrop)
-
+        roadGRP.clear(screen,backDrop)
+        
         spriteGRP.update()
         gunGRP.update()
         zombieGRP.update(car)
+        roadGRP.update()
 
+        roadGRP.draw(screen) 
         zombieGRP.draw(screen)
         spriteGRP.draw(screen)
         gunGRP.draw(screen)
+        
         
         pygame.display.flip()
 

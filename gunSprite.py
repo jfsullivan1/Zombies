@@ -4,7 +4,7 @@ import pygame
 import math
 import random
 
-screen = pygame.display.set_mode((1600, 820))
+screen = pygame.display.set_mode((1000, 700))
 
 #Gun Default Class
 class gunDefault(pygame.sprite.Sprite):
