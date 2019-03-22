@@ -11,7 +11,7 @@ class gunDefault(pygame.sprite.Sprite):
     def __init__(self, startingX, startingY, gun):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load("Sprites/bullet.png")
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (20, 35))
         self.rect = self.image.get_rect()
         self.rect.centerx = startingX

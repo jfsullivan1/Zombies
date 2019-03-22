@@ -13,7 +13,7 @@ class BackGround(pygame.sprite.Sprite):
     def __init__(self):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load("Sprites/back.png")
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (1000, 2000))
         self.rect = self.image.get_rect()
         self.dy = 15

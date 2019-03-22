@@ -123,16 +123,16 @@ def main():
             z.reset()
         
         #Draws the sprites to the screen
+        roadGRP.clear(screen,backDrop)
         spriteGRP.clear(screen, backDrop)
         gunGRP.clear(screen, backDrop)
         zombieGRP.clear(screen, backDrop)
-        roadGRP.clear(screen,backDrop)
-        
+
+        roadGRP.update()
         spriteGRP.update()
         gunGRP.update()
         zombieGRP.update(car)
-        roadGRP.update()
-
+    
         roadGRP.draw(screen) 
         zombieGRP.draw(screen)
         spriteGRP.draw(screen)

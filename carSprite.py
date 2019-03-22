@@ -12,7 +12,7 @@ class Vehicle(pygame.sprite.Sprite):
     def __init__(self, gun):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load("Sprites/car7.png")
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (50, 80))
         self.rect = self.image.get_rect()
         self.gun = gun
@@ -32,28 +32,28 @@ class Vehicle(pygame.sprite.Sprite):
     def up(self):
         self.rect.centery -= self.dy
         self.image = self.carImgUp
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (50, 80))
 
     #Turn down
     def down(self):
         self.rect.centery += self.dy
         self.image = self.carImgDown
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (50, 80))
 
     #Turn right
     def right(self):
         self.rect.centerx += self.dx
         self.image = self.carImgRight
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (80, 50))
 
     #Turn left
     def left(self):
         self.rect.centerx -= self.dx
         self.image = self.carImgLeft
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (80, 50))
 
 
@@ -62,7 +62,7 @@ class Vehicle(pygame.sprite.Sprite):
         self.rect.centerx += 10
         self.rect.centery -= 10
         self.image = self.carImgRightUp
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (90, 90))
         
     #Right and down diagonal
@@ -70,7 +70,7 @@ class Vehicle(pygame.sprite.Sprite):
         self.rect.centerx += 10
         self.rect.centery += 10
         self.image = self.carImgRightDown
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (90, 90))
         
     #Left and up diagonal
@@ -78,7 +78,7 @@ class Vehicle(pygame.sprite.Sprite):
         self.rect.centerx -= 10
         self.rect.centery -= 10
         self.image = self.carImgLeftUp
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (90, 90))
         
     #Left and down diagonal
@@ -86,7 +86,7 @@ class Vehicle(pygame.sprite.Sprite):
         self.rect.centerx -= 10
         self.rect.centery += 10
         self.image = self.carImgLeftDown
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (90, 90))
 
     

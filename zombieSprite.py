@@ -11,7 +11,7 @@ class ZombieOne(pygame.sprite.Sprite):
     def __init__(self, car):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.image.load("Sprites/z1D.png")
-        self.image = self.image.convert()
+        self.image = self.image.convert_alpha()
         self.image = pygame.transform.scale(self.image, (80, 80))
         self.rect = self.image.get_rect()
         self.speed = 5
@@ -28,24 +28,24 @@ class ZombieOne(pygame.sprite.Sprite):
         #left
         if dx > 0 and dy < dx:
             self.image = pygame.image.load("Sprites/z1L.png")
-            self.image = self.image.convert()
+            self.image = self.image.convert_alpha()
             self.image = pygame.transform.scale(self.image, (80, 80))
         #right
         if dx < 0 and dy > dx:
             self.image = pygame.image.load("Sprites/z1R.png")
-            self.image = self.image.convert()
+            self.image = self.image.convert_alpha()
             self.image = pygame.transform.scale(self.image, (80, 80))
 
         #up
         if dx < .02 and dx > -.02 and dy > 0:
             self.image = pygame.image.load("Sprites/z1U.png")
-            self.image = self.image.convert()
+            self.image = self.image.convert_alpha()
             self.image = pygame.transform.scale(self.image, (80, 80))
 
         #down
         if dx < .02 and dx > -.02 and dy < 0:
             self.image = pygame.image.load("Sprites/z1D.png")
-            self.image = self.image.convert()
+            self.image = self.image.convert_alpha()
             self.image = pygame.transform.scale(self.image, (80, 80))
 
 
