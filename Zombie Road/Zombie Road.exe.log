@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "Zombie Road.py", line 23, in <module>
+  File "zipextimporter.pyo", line 82, in load_module
+  File "gameScreen.pyo", line 32, in <module>
+pygame.error: Couldn't open 'Sounds/ZombiesAreComing.ogg'
